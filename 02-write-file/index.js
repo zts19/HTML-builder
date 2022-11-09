@@ -17,3 +17,7 @@ stdin.on('data', (data) => {
 process.on('exit', () => {
     stdout.write('\nProcess Is Finished!\nGOOD BYE!!!\n')
 })
+
+process.on('SIGINT', function() {
+    process.exit();
+});
